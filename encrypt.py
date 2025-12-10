@@ -10,5 +10,5 @@ def encrypt(text,key):
         fiestel_result = fiestel(r,key[i])
         l,r=r,xor(l,fiestel_result)
     
-        final = r + l
-        return permute(final, final_permutation)
+    final = r + l
+    return permute(final, final_permutation)
