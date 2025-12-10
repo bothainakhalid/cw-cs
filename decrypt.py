@@ -12,3 +12,6 @@ def decrypt(cipher,keys):
 
     final = r + l
     return permute(final,final_permutation)
+
+
+    
