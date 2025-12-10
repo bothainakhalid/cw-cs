@@ -10,7 +10,9 @@ def s_box_substitutions(input_bits):
         value = s_boxes[i][row][column]
         result +=f"{value:04b}"
     return result
-    
+
 def fiestel(right_half, key):
     expanded = permute(right_half,expand)
     x = xor(key,expanded)
+    subs = s_box_substitutions(x)
+    return permute(subs,p_box)
