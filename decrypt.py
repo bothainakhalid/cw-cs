@@ -7,7 +7,7 @@ def decrypt(cipher,keys):
     l = block[:32]
     r = block [32:]
     for i in range (15,-1,-1):
-        fiestel_result = fiestel(r,key[i])
+        fiestel_result = fiestel(r,keys[i])
         l,r = r, xor(l,fiestel_result)
 
     final = r + l
